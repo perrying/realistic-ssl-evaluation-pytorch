@@ -42,3 +42,8 @@ WIP
 |[MixMatch](https://arxiv.org/abs/1905.02249)|( 6.50 )|( 3.27 (0.31) )|N/A|N/A
 
 *NOTE: Experimental setting of ICT and MixMatch papers is different from this benchmark.*
+
+# Reference
+- [Realistic Evaluation of Deep Semi-Supervised Learning Algorithms](https://arxiv.org/abs/1804.09170), by Avital Oliver*, Augustus Odena*, Colin Raffel*, Ekin D. Cubuk, and Ian J. Goodfellow, arXiv preprint arXiv:1804.09170.
+- [Interpolation Consistency Training for Semi-Supervised Learning](https://arxiv.org/abs/1903.03825), by Vikas Verma, Alex Lamb, Juho Kannala, Yoshua Bengio, David Lopez-Paz
+- [MixMatch: A Holistic Approach to Semi-Supervised Learning](https://arxiv.org/abs/1905.02249), by David Berthelot, Nicholas Carlini, Ian Goodfellow, Nicolas Papernot, Avital Oliver, Colin Raffel
