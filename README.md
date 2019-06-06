@@ -32,14 +32,14 @@ WIP
 |algorithm|paper||this repo (one trial)| |
 |--|--|--|--|--|
 ||cifar10|svhn|cifar10|svhn|
-|Supervised|20.26 (0.38)|12.83 (0.47)|20.60|12.15
-|Pi-Model|16.37 (0.63)|7.19 (0.27)|15.93|7.41
-|Mean Teacher|15.87 (0.28)|5.65 (0.47)|N/A|N/A
-|VAT|13.86 (0.27)|5.63 (0.20)|13.69|5.84
-|VAT+EM|13.13 (0.39)|5.35 (0.19)|13.55|5.75
-|Pseudo-Label|17.78 (0.57)|7.62 (0.29)|14.12|7.18
-|[ICT](https://arxiv.org/abs/1903.03825)|( 7.66 (0.17) )|( 3.53 (0.07) )|N/A|N/A
-|[MixMatch](https://arxiv.org/abs/1905.02249)|( 6.50 )|( 3.27 (0.31) )|N/A|N/A
+|Supervised|20.26 ±0.38|12.83 ±0.47|20.60|12.15
+|Pi-Model|16.37 ±0.63|7.19 ±0.27|15.93|7.41
+|Mean Teacher|15.87 ±0.28|5.65 ±0.47|N/A|N/A
+|VAT|13.86 ±0.27|5.63 ±0.20|13.69|5.84
+|VAT+EM|13.13 ±0.39|5.35 ±0.19|13.55|5.75
+|Pseudo-Label|17.78 ±0.57|7.62 ±0.29|14.12|7.18
+|[ICT](https://arxiv.org/abs/1903.03825)|( 7.66 ±0.17 )|( 3.53 ±0.07 )|N/A|N/A
+|[MixMatch](https://arxiv.org/abs/1905.02249)|( 6.50 )|( 3.27 ±0.31 )|N/A|N/A
 
 *NOTE: Experimental setting of ICT and MixMatch papers is different from this benchmark.*
 
