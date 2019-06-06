@@ -1,4 +1,4 @@
-# realistic-ssl-evalution-pytorch
+# realistic-ssl-evaluation-pytorch
 This repository is reimplementation of [Realistic Evaluation of Deep Semi-Supervised Learning Algorithms](https://arxiv.org/abs/1804.09170), by Avital Oliver*, Augustus Odena*, Colin Raffel*, Ekin D. Cubuk, and Ian J. Goodfellow, arXiv preprint arXiv:1804.09170.
 
 Original repo is [here](https://github.com/brain-research/realistic-ssl-evaluation).
