@@ -16,7 +16,7 @@ Prepare dataset
 python build_dataset.py
 ```
 
-Default setting is SVHN 1000 labels. If you try other settings, please check the options first by ```python python build_dataset.py -h```.
+Default setting is SVHN 1000 labels. If you try other settings, please check the options first by ```python build_dataset.py -h```.
 
 Running experiments
 
