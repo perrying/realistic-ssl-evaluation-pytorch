@@ -15,7 +15,7 @@ class MT(nn.Module):
         model.update_batch_stats(False)
         _y = model(x) # recompute y since y as input is detached
         model.update_batch_stats(True)
-        return (F.mse_loss(y_hat.softmax(1).detach(), _y.softmax(1), reduction="none").mean(1) * mask).mean()
+        return (F.mse_loss(_y.softmax(1), y_hat.softmax(1).detach(), reduction="none").mean(1) * mask).mean()
 
     def moving_average(self, parameters):
         ema_factor = min(1 - 1 / (self.global_step), self.ema_factor)

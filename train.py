@@ -136,10 +136,10 @@ for l_data, u_data in zip(l_loader, u_loader):
     l_input, target = l_input.to(device).float(), target.to(device).long()
 
     if args.alg != "supervised":
-        u_input, dammy_target = u_data
-        u_input, dammy_target = u_input.to(device).float(), dammy_target.to(device).long()
+        u_input, dummy_target = u_data
+        u_input, dummy_target = u_input.to(device).float(), dummy_target.to(device).long()
 
-        target = torch.cat([target, dammy_target], 0)
+        target = torch.cat([target, dummy_target], 0)
         unlabeled_mask = (target == -1).float()
 
         inputs = torch.cat([l_input, u_input], 0)
