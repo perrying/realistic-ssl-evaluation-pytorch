@@ -47,7 +47,7 @@ pi_config = {
 ict_config = {
     # interpolation consistency training
     "ema_factor" : 0.999,
-    "lr" : 3e-4,
+    "lr" : 4e-4,
     "consis_coef" : 100,
     "alpha" : 0.1,
 }
