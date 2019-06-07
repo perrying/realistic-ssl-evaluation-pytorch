@@ -110,7 +110,7 @@ elif args.alg == "PL": # pseudo label
     ssl_obj = PL(alg_cfg["threashold"])
 elif args.alg == "MT": # mean teacher
     from lib.algs.mean_teacher import MT
-    t_model = wrn.WRN(2, dataset_cfg["num_classes"]).to(device)
+    t_model = wrn.WRN(2, dataset_cfg["num_classes"], transform_fn).to(device)
     t_model.load_state_dict(model.state_dict())
     ssl_obj = MT(t_model, alg_cfg["ema_factor"])
 elif args.alg == "PI": # PI Model
@@ -118,7 +118,7 @@ elif args.alg == "PI": # PI Model
     ssl_obj = PiModel()
 elif args.alg == "ICT": # interpolation consistency training
     from lib.algs.ict import ICT
-    t_model = wrn.WRN(2, dataset_cfg["num_classes"]).to(device)
+    t_model = wrn.WRN(2, dataset_cfg["num_classes"], transform_fn).to(device)
     t_model.load_state_dict(model.state_dict())
     ssl_obj = ICT(alg_cfg["alpha"], t_model, alg_cfg["ema_factor"])
 elif args.alg == "supervised":
