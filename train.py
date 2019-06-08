@@ -121,6 +121,9 @@ elif args.alg == "ICT": # interpolation consistency training
     t_model = wrn.WRN(2, dataset_cfg["num_classes"], transform_fn).to(device)
     t_model.load_state_dict(model.state_dict())
     ssl_obj = ICT(alg_cfg["alpha"], t_model, alg_cfg["ema_factor"])
+elif args.alg == "MM": # MixMatch
+    from lib.algs.mixmatch import MixMatch
+    ssl_obj = MixMatch(alg_cfg["T"], alg_cfg["K"], alg_cfg["alpha"])
 elif args.alg == "supervised":
     pass
 else:
@@ -135,7 +138,7 @@ for l_data, u_data in zip(l_loader, u_loader):
     l_input, target = l_data
     l_input, target = l_input.to(device).float(), target.to(device).long()
 
-    if args.alg != "supervised":
+    if args.alg != "supervised": # for ssl algorithm
         u_input, dummy_target = u_data
         u_input, dummy_target = u_input.to(device).float(), dummy_target.to(device).long()
 
@@ -145,6 +148,7 @@ for l_data, u_data in zip(l_loader, u_loader):
         inputs = torch.cat([l_input, u_input], 0)
         outputs = model(inputs)
 
+        # ramp up exp(-5(1 - t)^2)
         coef = alg_cfg["consis_coef"] * math.exp(-5 * (1 - min(iteration/shared_cfg["warmup"], 1))**2)
         ssl_loss = ssl_obj(inputs, outputs.detach(), model, unlabeled_mask) * coef
 
@@ -153,6 +157,7 @@ for l_data, u_data in zip(l_loader, u_loader):
         coef = 0
         ssl_loss = torch.zeros(1).to(device)
 
+    # supervised loss
     cls_loss = F.cross_entropy(outputs, target, reduction="none", ignore_index=-1).mean()
 
     loss = cls_loss + ssl_loss
