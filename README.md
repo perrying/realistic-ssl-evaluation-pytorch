@@ -38,10 +38,10 @@ WIP
 |VAT|13.86 ±0.27|5.63 ±0.20|13.69|5.84
 |VAT+EM|13.13 ±0.39|5.35 ±0.19|13.45|5.70
 |Pseudo-Label|17.78 ±0.57|7.62 ±0.29|14.12|7.18
-|[ICT](https://arxiv.org/abs/1903.03825)|( 7.66 ±0.17 )|( 3.53 ±0.07 )|( 14.60 )|( 6.30 )
+|[ICT](https://arxiv.org/abs/1903.03825)|( 7.66 ±0.17 )|( 3.53 ±0.07 )|N/A|N/A
 |[MixMatch](https://arxiv.org/abs/1905.02249)|( 6.50 )|( 3.27 ±0.31 )|N/A|N/A
 
-*NOTE: Experimental setting of ICT and MixMatch papers is different from this benchmark, and the implementation of this repo is simplified.*
+*NOTE: Experimental setting of ICT and MixMatch papers is different from this benchmark.*
 
 # Reference
 - [Realistic Evaluation of Deep Semi-Supervised Learning Algorithms](https://arxiv.org/abs/1804.09170), by Avital Oliver*, Augustus Odena*, Colin Raffel*, Ekin D. Cubuk, and Ian J. Goodfellow, arXiv preprint arXiv:1804.09170.
