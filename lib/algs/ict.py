@@ -9,6 +9,7 @@ class ICT(nn.Module):
         super().__init__()
         self.alpha = alpha
         self.mean_teacher = model
+        self.mean_teacher.train()
         self.ema_factor = ema_factor
         self.global_step = 0
 
