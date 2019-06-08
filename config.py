@@ -72,5 +72,6 @@ config = {
     "MT" : mt_config,
     "PI" : pi_config,
     "ICT" : ict_config,
+    "MM" : mm_config,
     "supervised" : supervised_config
 }
