@@ -29,10 +29,10 @@ Default setting is VAT. Please check the options by ```python python train.py -h
 # Performance
 WIP
 
-|algorithm|paper||this repo (one trial)| |
+|algorithm|paper||this repo| |
 |--|--|--|--|--|
 ||cifar10 4k labels|svhn 1k labels|cifar10 4k labels|svhn 1k labels|
-|Supervised|20.26 ±0.38|12.83 ±0.47|20.60|12.33±0.25
+|Supervised|20.26 ±0.38|12.83 ±0.47|20.35±0.14|12.33±0.25
 |Pi-Model|16.37 ±0.63|7.19 ±0.27|15.93|7.81±0.39
 |Mean Teacher|15.87 ±0.28|5.65 ±0.47|15.59|6.48±0.44
 |VAT|13.86 ±0.27|5.63 ±0.20|13.69|5.84±0.20
