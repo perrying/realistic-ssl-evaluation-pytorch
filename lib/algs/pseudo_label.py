@@ -16,7 +16,7 @@ class PL(nn.Module):
         p_target = gt_mask[:,None] * 10 * onehot_label + lt_mask[:,None] * y_probs
         model.update_batch_stats(False)
         output = model(x)
-        loss = -(p_target.detach() * F.log_softmax(output, 1)).sum(1).mean()
+        loss = (-(p_target.detach() * F.log_softmax(output, 1)).sum(1)*mask).mean()
         model.update_batch_stats(True)
         return loss
 
