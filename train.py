@@ -92,7 +92,7 @@ print("parameters : ", alg_cfg)
 condition["h_parameters"] = alg_cfg
 
 if args.em > 0:
-    print("entropy maximization : {}".format(args.em))
+    print("entropy minimization : {}".format(args.em))
     exp_name += "em_"
 condition["entropy_maximization"] = args.em
 
